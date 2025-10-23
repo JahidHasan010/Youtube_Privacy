@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "privacy/privacy.html", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/privacy", "dest": "/privacy/privacy.html" },
+    { "src": "/privacy/", "dest": "/privacy/privacy.html" },
+    { "src": "/privacy/privacy.html", "dest": "/privacy/privacy.html" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
